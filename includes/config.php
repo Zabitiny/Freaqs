@@ -1,0 +1,11 @@
+<?php
+    ob_start(); //turns on output buffering
+    session_start(); //enables the use of sessions
+
+    $timezone = date_default_timezone_set("America/Los_Angeles");
+    $con = mysqli_connect("localhost", "root", "", "freaqs");
+
+    if(mysqli_connect_errno()) {
+        echo "Failed to connect: " . mysqli_connect_errno();
+    }
+?>

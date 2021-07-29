@@ -45,7 +45,6 @@
 					<div class="hasAccountText">
 						<a href="signup.php">Don't have an account yet? Sign up here.</a>
 					</div>
-
 				</form>
 			</div>
 

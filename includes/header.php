@@ -15,7 +15,7 @@ if(isset($_SESSION['userLoggedIn'])) {
 	echo "<script>userLoggedIn = '$username';</script>";
 }
 else {
-	header("Location: register.php");
+	header("Location: login.php");
 }
 
 ?>
@@ -26,7 +26,7 @@ else {
 	<title>Get yo Freaq on</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src='assets/js/script.js'></script>
 </head>
 <body>

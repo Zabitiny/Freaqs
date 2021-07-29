@@ -3,9 +3,9 @@
 	include("includes/classes/Account.php");
 	include("includes/classes/Constants.php");
 
-    $account = new Account($con);
-    
-    include("includes/handlers/login-handler.php");
+	$account = new Account($con);
+	
+	include("includes/handlers/login-handler.php");
 
 	function getInputValue($name){
 		if(isset($_POST[$name])){
@@ -30,7 +30,7 @@
 					<h2>login to your account</h2>
 					<p>
 						<label for="loginUsername">Username</label>
-						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Big Tuna" value="<?php getInputValue('loginUsername') ?>" required> 
+						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Big Tuna" value="<?php getInputValue('loginUsername') ?>" required>
 					</p>
 
 					<p>

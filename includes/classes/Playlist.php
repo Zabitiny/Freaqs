@@ -58,7 +58,6 @@
                 $dropdown = $dropdown . "<option value='$id'>$name</option>";
             }
             return $dropdown . "</select>";
-
         }
     }
 

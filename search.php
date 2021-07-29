@@ -1,51 +1,52 @@
 <?php
     include("includes/includedFiles.php");
 
-    if(isset($_GET['term'])) {
-        $term = urldecode($_GET['term']);   //decodes url text to non-url text
+    if(isset($_GET['userInput'])) {
+        $userInput = urldecode($_GET['userInput']);   // gets value from url
     }
     else{
-        $term = "";
+        $userInput = "";
     }
 ?>
 
 <div class="searchContainer">
 
     <h4>search for an artist, album, or song</h4>
-    <input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="Start Typing..." onfocus="this.selectionStart = this.selectionEnd = this.value.length;">
+    <input type="text" class="searchInput" value="<?php echo $userInput; ?>" placeholder="Start Typing..." onfocus="this.selectionStart = this.selectionEnd = this.value.length;">
 </div>
 
 <script>
 $(".searchInput").focus();
 
     $(function() {
-        
+        // sets value in the url
         $(".searchInput").keyup(function() {
             //reset timer and refresh after 500 miliseconds
             clearTimeout(timer);    
             timer = setTimeout(function() {
                 var val = $(".searchInput").val();
-                openPage("search.php?term=" + val);
+                openPage("search.php?userInput=" + val);
             }, 500);
         })
     })
 </script>
 
-<?php if($term =="") exit(); ?>
+<?php if($userInput =="") exit(); ?>
 
 <div class="trackListContainer borderBottom">
     <h2>songs</h2>
     <ul class="trackList">
 
         <?php
-            $songsQuery = mysqli_query($con, "SELECT id FROM songs WHERE title LIKE '$term%' LIMIT 10"); //'%' means any number of characters
+            $songsQuery = mysqli_query($con, "SELECT id FROM songs WHERE title LIKE '$userInput%' LIMIT 10");
             if(mysqli_num_rows($songsQuery) == 0) {
-                echo "<span class='noResults'> no frequency found matching " . $term . "</span>";
+                echo "<span class='noResults'> no frequency found matching " . $userInput . "</span>";
             }
 
-            //list out tracks in album
+            // list out tracks in album
             $songIdArray = array();
-            $i =1;
+            $i = 1;
+            // get each result from the query
             while($row = mysqli_fetch_array($songsQuery)) {
                 if($i >= 20){
                     break;
@@ -92,9 +93,9 @@ $(".searchInput").focus();
     <h2>artists</h2>
 
     <?php
-        $artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '$term%' LIMIT 10");
+        $artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '$userInput%' LIMIT 10");
         if(mysqli_num_rows($artistsQuery) == 0) {
-            echo "<span class='noResults'> no artists found matching " . $term . "</span>";
+            echo "<span class='noResults'> no artists found matching " . $userInput . "</span>";
         }
 
         while($row = mysqli_fetch_array($artistsQuery)) {
@@ -113,15 +114,14 @@ $(".searchInput").focus();
                 </div>";
         }
     ?>
-
 </div>
 
 <div class="gridViewContainer">
     <h2>albums</h2>
 	<?php 
-		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '$term%' LIMIT 10");
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '$userInput%' LIMIT 10");
         if(mysqli_num_rows($albumQuery) == 0) {
-            echo "<span class='noResults'> no albums found matching " . $term . "</span>";
+            echo "<span class='noResults'> no albums found matching " . $userInput . "</span>";
         }
 
 		//goes through each row in albums table

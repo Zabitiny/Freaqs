@@ -26,8 +26,9 @@
 <body>
     <div id="background">
 		<div id="loginContainer">	
-            <div id="inputContainer">
-                <form id="registerForm" action="register.php" method="POST">
+      <div id="inputContainer">
+        <form id="registerForm" action="browse.php" method="POST">
+					
 					<h2>Create your free account</h2>
 					<p>
 						<?php echo $account->getError(Constants::$usernameCharacters); ?>
@@ -77,20 +78,22 @@
 					<button type="submit" name="registerButton">sign up</button>
 
 					<div class="hasAccountText">
-						<a href="login.php">Already have an account? Log in here.</a>
+						<a href="login.php">Already have an account?</a>
 					</div>
+					
 				</form>
-            </div>
+			</div>
             
-            <div id="loginText">
-                <h1>made by & for music freaks</h1>
-                <h2>the place where you can find your favorite frequencies</h2>
-                <ul>
-                    <li>smooth trainsitions between songs</li>
-                    <li>different shuffle options</li>
-                    <li>discuss lyrics with others</li>
-                    <li>have an AI line up your playlist for you</li>
-                </ul>
+			<div id="loginText">
+				
+				<h1>Made By & For Music FREAKS</h1>
+				<h2>The place with the best frequencies</h2>
+				<ul>
+					<li>Variety of shuffle options</li>
+					<li>Discuss lyrics with others</li>
+					<li>Have AI smooth out your queue</li>
+				</ul>
+
 			</div>
 
 		</div>

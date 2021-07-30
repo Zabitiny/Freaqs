@@ -26,8 +26,8 @@
 	<div id="background">
 		<div id="loginContainer">	
 			<div id="inputContainer">
-				<form id="loginForm" action="register.php" method="POST">
-					<h2>login to your account</h2>
+				<form id="loginForm" action="browse.php" method="POST">
+					<h2>Login to your account</h2>
 					<p>
 						<label for="loginUsername">Username</label>
 						<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. Big Tuna" value="<?php getInputValue('loginUsername') ?>" required> 
@@ -43,20 +43,21 @@
 					<button type="submit" name="loginButton">log in</button>
 
 					<div class="hasAccountText">
-						<a href="signup.php">Don't have an account yet? Sign up here.</a>
+						<a href="signup.php">Don't have an account yet?</a>
 					</div>
 				</form>
 			</div>
 
 			<div id="loginText">
-				<h1>made by & for music freaks</h1>
-				<h2>the place where you can find your favorite frequencies</h2>
+				
+				<h1>Made By & For Music FREAKS</h1>
+				<h2>The place with the best frequencies</h2>
 				<ul>
-					<li>smooth trainsitions between songs</li>
-					<li>different shuffle options</li>
-					<li>discuss lyrics with others</li>
-					<li>have AI line up your playlist for you</li>
+					<li>Variety of shuffle options</li>
+					<li>Discuss lyrics with others</li>
+					<li>Have AI smooth out your queue</li>
 				</ul>
+
 			</div>
 		</div>
 	</div>

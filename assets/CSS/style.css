@@ -213,13 +213,14 @@ a {
 #search {
     width: calc(100% - 25px);
 		height: 34px;
-		color: inherit;
+		color: #a0a0a0;
 		border: none;
 		font-size: 24px;
 		font-weight: 700;
 		background-color: #2d2d2d;
 		transition: background-color 0.5s ease-in-out;
 		margin-top: 2px;
+		border-radius: 4px;
 }
 
 #search:focus {
@@ -229,16 +230,13 @@ a {
 
 .dropdown {
     background: #000;
-    width: 738px;
+    width: 761px;
     position: absolute;
     top: 28px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05),
-                0 0 2px rgba(0, 0, 0, 0.05),
-                0 0 3px rgba(0, 0, 0, 0.05),
-                0 0 4px rgba(0, 0, 0, 0.05),
-                0 0 5px rgba(0, 0, 0, 0.05),
-                0 0 4px rgba(0, 0, 0, 0.05),
-                0 0 5px rgba(0, 0, 0, 0.05)
+		font-size: 18px;
+    font-weight: bold;
+		color: #fff;
+		padding: 8px;
 }
 
 .dropdown li {
@@ -248,11 +246,7 @@ a {
 
 .dropdown a {
     display: block;
-    padding: 8px;
     text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .dropdown li a:hover {

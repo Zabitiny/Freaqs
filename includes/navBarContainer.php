@@ -29,29 +29,27 @@
 <script>
   $(function() {
     $(document).ready(() => {
-      function fetchData() {
+			function fetchData() {
         var s = $('#search').val();
-
-        if(s === "") {
-          $('#dropdown').css('display', 'none');
-        }
-				else {
 					$.post('searchDropdown.php', 
 						{
-							s:s
-						}, 
+							search: s
+						},
 						(data, status) => {
-							if(data != "No results") {
-								$('#dropdown').css('display', 'block');
-								$('#dropdown').html(data);
-							}
-						})
-				}
-      }
+							$('#dropdown').css('display', 'block');
+							$('#dropdown').html(data);
+						});
+			}
+			if($('#search').val() === '') $('#dropdown').css('display', 'none');
+			
+			$('#search').on('input',  fetchData);
+			
+			$('#search').on('click ', () => {
+				if($('#search').val() != '') fetchData();
+			});
 
-			$('#search').on('input', fetchData);
 			$('body').on('click', () => {
-				$('#dropdown').css('display', 'none');
+					$('#dropdown').css('display', 'none');
 			});
     });
   });

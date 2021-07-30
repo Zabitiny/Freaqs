@@ -5,7 +5,9 @@
 <div class="gridViewContainer">
 
 	<?php 
-		$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
+		$albumQuery = mysqli_query($con, "SELECT * 
+																			FROM albums 
+																			ORDER BY RAND() LIMIT 10");
 
 		// goes through each row in albums table
 		while($row = mysqli_fetch_array($albumQuery)) { 

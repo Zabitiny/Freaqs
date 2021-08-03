@@ -196,209 +196,221 @@ a {
 }
 
 .navBar-center img {
-    width: 25px;
-		position: relative;
-    float: right;
-    right: 30px;
-    top: 7px;
+	width: 25px;
+	position: relative;
+	float: right;
+	right: 30px;
+	top: 7px;
 }
 
 .navBar .navBar-right {
-    height: 52px;
-    padding: 13px 3px;
-		margin: 0px 20px;
-    box-sizing: border-box;
+	height: 52px;
+	padding: 13px 3px;
+	margin: 0px 20px;
+	box-sizing: border-box;
 }
 
 #search {
-    width: calc(100% - 25px);
-		height: 34px;
-		color: #a0a0a0;
-		border: none;
-		font-size: 24px;
-		font-weight: 700;
-		background-color: #2d2d2d;
-		transition: background-color 0.5s ease-in-out;
-		margin-top: 2px;
-		border-radius: 4px;
+	width: calc(100% - 25px);
+	height: 34px;
+	color: #a0a0a0;
+	border: none;
+	font-size: 24px;
+	font-weight: 700;
+	background-color: #2d2d2d;
+	transition: background-color 0.5s ease-in-out;
+	border-radius: 4px;
 }
 
 #search:focus {
-    background-color: #000;
-    transition: background-color 0.5s ease-in-out;
+	background-color: #000;
+	transition: background-color 0.5s ease-in-out;
 }
 
 .dropdown {
-    background: #000;
-    width: 761px;
-    position: absolute;
-    top: 28px;
-		font-size: 18px;
-    font-weight: bold;
-		color: #fff;
-		padding: 8px;
+	background: #000;
+	width: 761px;
+	position: absolute;
+	top: 28px;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 8px;
 }
 
 .dropdown li {
-    list-style: none;
-    text-align: left;
+	list-style: none;
 }
 
 .dropdown a {
-    display: block;
-    text-decoration: none;
+	display: block;
+	text-decoration: none;
+	padding: 4px 0px;
 }
 
-.dropdown li a:hover {
-    background: #000;
+.dropdown .searchItem {
+	padding-left: 30px;
+	color: #a0a0a0;
+}
+
+.dropdown .searchItem:hover {
+	color: #fff;
+}
+
+.searchItem .searchData {
+	padding: 3px 0px;
+	position: relative;
+	left: 20px;
 }
 
 .tracklistRow {
-    height: 40px;
-    padding: 15px 10px;
-    list-style: none;
+	height: 40px;
+	padding: 15px 10px;
+	list-style: none;
 }
 
 .tracklistRow span {
-    color: #939393;
-    font-weight: 200;
+	color: #939393;
+	font-weight: 200;
 }
 
 .tracklistRow:hover {
-    background-color: #282828;
+	background-color: #282828;
 }
 
 .tracklistrow .trackCount {
-    width: 8%;
-    float: left;
+	width: 8%;
+	float: left;
 }
 
 .tracklistRow .trackCount img {
-    width: 20px;
-    visibility: hidden;
-    position: absolute;
-    cursor: pointer;
+	width: 20px;
+	visibility: hidden;
+	position: absolute;
+	cursor: pointer;
 }
 
 .tracklistRow:hover .trackCount img {
-    visibility: visible;
+	visibility: visible;
 }
 
 .tracklistRow .trackCount span {
-    visibility: visible;
+	visibility: visible;
 }
 
 .tracklistRow:hover .trackCount span {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .tracklistRow .trackInfo {
-    width: 75%;
-    float: left;
+	width: 75%;
+	float: left;
 }
 
 .tracklistRow .trackInfo span {
-    display: block;
-    width: 25%;
+	display: block;
+	width: 25%;
 }
 
 .tracklistRow .trackOptions {
-    width: 5%;
-    float: left;
-    text-align: right;
+	width: 5%;
+	float: left;
+	text-align: right;
 }
 
 .tracklistRow .trackOptions img {
-    width: 15px;
-    visibility: hidden;
+	width: 15px;
+	visibility: hidden;
 }
 
 .tracklistRow:hover .trackOptions img {
-    visibility: visible;
+	visibility: visible;
 }
 
 .tracklistRow .trackDuration {
-    width: 12%;
-    float: left;
-    text-align: right;
+	width: 12%;
+	float: left;
+	text-align: right;
 }
 
 .tracklistRow .trackInfo .trackName {
-    color: #fff;
-    margin-bottom: 7px;
+	color: #fff;
+	margin-bottom: 7px;
 }
 
 a.navItemLink {
-    color: #a0a0a0;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 700;
+	color: #a0a0a0;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
 }
 
 .navItemLink:hover {
-    color: #fff;
+	color: #fff;
 }
 
 #mainViewContainer {
-    margin-top: 52px;
+	margin-top: 52px;
 }
 
 #mainContent {
-    padding: 0 20px;
+	padding: 0 20px;
 }
 
 .pageHeadingBig {
-    padding: 20px;
-    text-align: center;
+	padding: 20px;
+	text-align: center;
 }
 
 .gridViewItem {
-    display: inline-block;
-    margin-right: 20px;
-    width: 29%;
-    max-width: 200px;
-    min-width: 150px;
-    margin-bottom: 20px;
+	display: inline-block;
+	margin-right: 20px;
+	width: 29%;
+	max-width: 200px;
+	min-width: 150px;
+	margin-bottom: 20px;
 }
 
 .gridViewItem img {
-    width: 100%;
+	width: 100%;
+	margin: 0px 20px;
 }
 
 .gridViewInfo {
-    font-weight: 300;
-    text-align: center;
-    padding: 5px 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+	font-weight: 300;
+	text-align: center;
+	padding: 5px 0;
+	left: 20px;
+	position: relative;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .gridViewItem a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .entityInfo {
-    padding: 40px 0 10px 0;
-    display: inline-block;
-    width: 100%;
+	padding: 40px 0 10px 0;
+	display: inline-block;
+	width: 100%;
 }
 
 .entityInfo .leftSection {
-    width: 30%;
-    float: left;
-    max-width: 250px;
+	width: 30%;
+	float: left;
+	max-width: 250px;
 }
 
 .entityInfo .leftSection img {
-    width: 100%;
+	width: 100%;
 }
 
 .entityInfo .rightSection {
-    width: 70%;
-    float: left;
-    padding: 5px 10px 5px 40px;
-    box-sizing: border-box;
+	width: 70%;
+	float: left;
+	padding: 5px 10px 5px 40px;
+	box-sizing: border-box;
 }
 
 .entityInfo .rightSection h2 {

@@ -31,17 +31,19 @@
     $(document).ready(() => {
 			function fetchData() {
         var s = $('#search').val();
-					$.post('searchDropdown.php', 
-						{
-							search: s
-						},
-						(data, status) => {
-							$('#dropdown').css('display', 'block');
-							$('#dropdown').html(data);
-						});
+				$.post('searchDropdown.php', 
+					{
+						search: s
+					},
+					(data, status) => {
+						$('#dropdown').css('display', 'block');
+						$('#dropdown').html(data);
+					});
 			}
 			if($('#search').val() === '') $('#dropdown').css('display', 'none');
-			
+			$('#search').keyup(() => {
+				if($('#search').val() === '') $('#dropdown').css('display', 'none');
+			});
 			$('#search').on('input',  fetchData);
 			
 			$('#search').on('click ', () => {
@@ -49,7 +51,7 @@
 			});
 
 			$('body').on('click', () => {
-					$('#dropdown').css('display', 'none');
+				$('#dropdown').css('display', 'none');
 			});
     });
   });

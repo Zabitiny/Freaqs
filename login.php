@@ -7,8 +7,9 @@
 
 	include("includes/handlers/login-handler.php");
 
-	function getInputValue($name){
-		if(isset($_POST[$name])){
+	// saves user input for username
+	function getInputValue($name) {
+		if(isset($_POST[$name])) {
 			echo $_POST[$name];
 		}
 	}
@@ -20,13 +21,13 @@
 	<title>Welcome to The Freaq Show!</title>
 	<Link rel="stylesheet" type="text/css" href="assets/css/register.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="assets/js/register.js"></script>
+	<script src="assets/js/script.js"></script>
 </head>
 <body>
 	<div id="background">
 		<div id="loginContainer">	
 			<div id="inputContainer">
-				<form id="loginForm" action="browse.php" method="POST">
+				<form id="loginForm" method="POST">
 					<h2>Login to your account</h2>
 					<p>
 						<label for="loginUsername">Username</label>
@@ -49,7 +50,6 @@
 			</div>
 
 			<div id="loginText">
-				
 				<h1>Made By & For Music FREAKS</h1>
 				<h2>The place with the best frequencies</h2>
 				<ul>
@@ -57,8 +57,8 @@
 					<li>Discuss lyrics with others</li>
 					<li>Have AI smooth out your queue</li>
 				</ul>
-
 			</div>
+			
 		</div>
 	</div>
 

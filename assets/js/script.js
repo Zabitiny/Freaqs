@@ -67,18 +67,18 @@ function logout() {
 }
 
 function openPage(url) {
-    if(timer != null) {
-        clearTimeout(timer);
-    }
+	if(timer != null) {
+		clearTimeout(timer);
+	}
 
-    if(url.indexOf("?") == -1) {
-        url += "?";
-    }
+	if(url.indexOf("?") == -1) {
+		url += "?";
+	}
 
-    var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);   //changes non-url chars to url chars
-    $("#mainContent").load(encodedUrl);
-    $("body").scrollTop(0); //auto scroll to top
-    history.pushState(null, null, url); //maintains proper url
+	var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);   //changes non-url chars to url chars
+	$("#mainContent").load(encodedUrl);
+	$("body").scrollTop(0); //auto scroll to top
+	history.pushState(null, null, url); //maintains proper url
 }
 
 function hideOptionsMenu() {

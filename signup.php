@@ -27,7 +27,7 @@
     <div id="background">
 		<div id="loginContainer">	
       <div id="inputContainer">
-        <form id="registerForm" action="browse.php" method="POST">
+        <form id="registerForm" method="POST">
 					
 					<h2>Create your free account</h2>
 					<p>

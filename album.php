@@ -26,10 +26,9 @@ $artist = $album->getArtist();
     <div class="rightSection">
         <h2><?php echo $album->getTitle(); ?></h2>
         <p>By 
-            <?php echo "<span class='artistName' role='link' tabIndex='0' onclick='openPage(\"artist.php?id=" . $artist->getId() . "\")'>" . $artist->getName() . "</span>"; ?>
+            <?php echo "<a class='artistName' role='link' tabIndex='0' href='artist.php?id=" . $artist->getId() . "'>" . $artist->getName() . "</a>"; ?>
         </p>
         <p><?php echo $album->getNumSongs();?> songs</p>
-
     </div>
 
 </div>
@@ -54,7 +53,7 @@ $artist = $album->getArtist();
 
                         <div class='trackInfo'>
                             <span class='trackName'>" . $albumSong->getTitle() .  "</span>
-                            <span class='artistName' role='link' tabIndex='0' onclick='openPage(\"artist.php?id=" . $albumArtist->getId() . "\")'>" . $albumArtist->getName() . "</span>
+                            <a class='artistName' role='link' tabIndex='0' href='artist.php?id=". $albumArtist->getId() ."'>" . $albumArtist->getName() . "</a>
                         </div>
 
                         <div class='trackOptions'>
